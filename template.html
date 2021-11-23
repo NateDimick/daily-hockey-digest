@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <h1>NHL Games for {{ date }}</h1>
+        {% for something in information %} <!-- TODO -->
+        <h2>{{ away_team }} @ {{ home_team }}, {{ time }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ away_team }}</th>
+                    <th>Stat</th>
+                    <th>{{ home_team }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for another iteration to be determined %} <!-- TODO -->
+                <tr>
+                    <td>{{ away value }}</td>
+                    <td>{{ stat name }}</td>
+                    <td>{{ home value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% endfor %}
+        
+    </body>
+</html>
