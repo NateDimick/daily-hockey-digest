@@ -20,6 +20,7 @@ from traceback import format_exc
 dotenv_file = join(project_directory, '.env')
 load_dotenv(dotenv_file)
 json_file = join(project_directory, f"{environ['SEASON']}-processed-results.json")
+summaries_file = join(project_directory, f"{environ['SEASON']}-team-summaries.json")
 raw_file = join(project_directory, f"{environ['SEASON']}-raw-requests.json")
 do_not_run_file = join(project_directory, 'do_not_run.flag')
 today = date.today()
@@ -55,41 +56,42 @@ def team_summary(team_name: str, game_log: list) -> dict:
 
     summary = {
         'games_played': len(game_log),
-        'games_played_home': len(home_points_allowed),
-        'games_played_away': len(away_points_allowed),
+        # 'games_played_home': len(home_points_allowed),
+        # 'games_played_away': len(away_points_allowed),
         'scoring_average': mean(points_scored),
-        'scoring_stddev': stdev(points_scored),
-        'scoring_average_home': mean(home_points_scored),
-        'scoring_average_away': mean(away_points_scored),
+        # 'scoring_stddev': stdev(points_scored),
+        # 'scoring_average_home': mean(home_points_scored),
+        # 'scoring_average_away': mean(away_points_scored),
         'highest_score': max(points_scored),
-        'highest_score_home': max(home_points_scored),
-        'highest_score_away': max(away_points_scored),
+        # 'highest_score_home': max(home_points_scored),
+        # 'highest_score_away': max(away_points_scored),
         'lowest_score': min(points_scored),
-        'lowest_score_home': min(home_points_scored),
-        'lowest_score_away': min(away_points_scored),
+        # 'lowest_score_home': min(home_points_scored),
+        # 'lowest_score_away': min(away_points_scored),
         'most_common_score': mode(points_scored),
         'nothingburgers': len([p for p in points_scored if p == 0]),
-        'nothingburgers_home': len([p for p in home_points_scored if p == 0]),
-        'nothingburgers_away': len([p for p in away_points_scored if p == 0]),
+        # 'nothingburgers_home': len([p for p in home_points_scored if p == 0]),
+        # 'nothingburgers_away': len([p for p in away_points_scored if p == 0]),
         'defense_average': mean(points_allowed),
         'defense_stddev': stdev(points_allowed),
-        'defense_average_home': mean(home_points_allowed),
-        'defense_average_away': mean(away_points_allowed),
-        'defense_average_home': mean(home_points_allowed),
-        'defense_average_away': mean(away_points_allowed),
+        # 'defense_average_home': mean(home_points_allowed),
+        # 'defense_average_away': mean(away_points_allowed),
         'highest_allowed': max(points_allowed),
-        'highest_allowed_home': max(home_points_allowed),
-        'highest_allowed_away': max(away_points_allowed),
+        # 'highest_allowed_home': max(home_points_allowed),
+        # 'highest_allowed_away': max(away_points_allowed),
         'lowest_allowed': min(points_allowed),
-        'lowest_allowed_home': min(home_points_allowed),
-        'lowest_allowed_away': min(away_points_allowed),
+        # 'lowest_allowed_home': min(home_points_allowed),
+        # 'lowest_allowed_away': min(away_points_allowed),
         'most_common_allowed': mode(points_allowed),
         'shutouts': len([p for p in points_allowed if p == 0]),
-        'shutouts_home': len([p for p in home_points_allowed if p == 0]),
-        'shutouts_away': len([p for p in away_points_allowed if p == 0])
+        # 'shutouts_home': len([p for p in home_points_allowed if p == 0]),
+        # 'shutouts_away': len([p for p in away_points_allowed if p == 0])
     }
 
     return summary
+
+def advanced_team_summary(team_name:str, game_log:list) -> dict:
+    pass
 
 def make_keys_readable(dict: dict):
     readable_keys = []

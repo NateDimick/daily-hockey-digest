@@ -68,6 +68,6 @@ def do_not_run_test():
 
 
 if __name__ == '__main__':
-    #html_rendering_manual_test()
+    html_rendering_manual_test()
     backup_files_test()
     do_not_run_test()

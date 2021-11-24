@@ -6681,5 +6681,74 @@
                 0
             ]
         }
+    },
+    {
+        "home": "Tampa Bay Lightning",
+        "away": "Philadelphia Flyers",
+        "completed": true,
+        "date": "2021-11-23T19:00:00-05:00",
+        "home_score": 4,
+        "away_score": 0,
+        "overtime": false,
+        "spread": 4,
+        "total": 4,
+        "periods": {
+            "home": [
+                1,
+                2,
+                1
+            ],
+            "away": [
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    {
+        "home": "Dallas Stars",
+        "away": "Edmonton Oilers",
+        "completed": true,
+        "date": "2021-11-23T20:30:00-05:00",
+        "home_score": 4,
+        "away_score": 1,
+        "overtime": false,
+        "spread": 3,
+        "total": 5,
+        "periods": {
+            "home": [
+                2,
+                1,
+                1
+            ],
+            "away": [
+                0,
+                1,
+                0
+            ]
+        }
+    },
+    {
+        "home": "Calgary Flames",
+        "away": "Chicago Blackhawks",
+        "completed": true,
+        "date": "2021-11-23T21:00:00-05:00",
+        "home_score": 5,
+        "away_score": 2,
+        "overtime": false,
+        "spread": 3,
+        "total": 7,
+        "periods": {
+            "home": [
+                2,
+                0,
+                3
+            ],
+            "away": [
+                1,
+                1,
+                0
+            ]
+        }
     }
 ]
