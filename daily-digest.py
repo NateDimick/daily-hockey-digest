@@ -10,10 +10,11 @@ from client import get_scores_from_date, just_todays_games
 from datetime import date, timedelta
 from dotenv import load_dotenv
 from mailer import send_email
-from os import environ
+from os import environ, read
 from os.path import join
 from project_directory import project_directory
 from statistics import mean, mode, stdev
+from traceback import format_exc
 
 dotenv_file = join(project_directory, '.env')
 load_dotenv(dotenv_file)
@@ -85,27 +86,56 @@ def team_summary(team_name: str, game_log: list) -> dict:
 
     return summary
 
+def make_keys_readable(dict: dict):
+    readable_keys = []
+    for k in dict:
+        key = k.replace('_', ' ')
+        if key.endswith('home'):
+            key = key.replace('home', 'away/home')
+        elif key.endswith('away'):  # away stats would have same name as home stats
+            continue
+        readable_keys.append(key)
+    return readable_keys
+
+def list_stats_filter_home_or_away(summary: dict, home: bool):
+    anti_suffix = 'away' if home else 'home'
+    stats = []
+    for k in summary:
+        if not k.endswith(anti_suffix):
+            stats.append(summary[k])
+
+    return stats
+
+
 def daily_job():
     today = date.today()
     yesterday = today + timedelta(days=-1)
+    print(today, yesterday)
     yesterdays_results = get_scores_from_date(yesterday)
+    print(yesterdays_results)
     with open(json_file, 'r') as f:
         all_results = json.load(f)
     all_results += yesterdays_results
     with open(json_file, 'w') as f:
-        json.dump(all_results, f)
+        json.dump(all_results, f, indent=4)
 
-    todays_matchups = just_todays_games(get_scores_from_date(today))
+    todays_matchups = just_todays_games(get_scores_from_date(today, raw=True, record=False))
+    print(todays_matchups)
     data = []
     for matchup in todays_matchups:
         game = {
             'home_team': matchup[0],
             'away_team': matchup[1],
-            'date': matchup[2],
+            'datetime': matchup[2],
         }
-        game['home_stats'] = team_summary(matchup[0], game_log(matchup[0]))
-        game['away_stats'] = team_summary(matchup[1], game_log(matchup[1]))
+        home_stats = team_summary(matchup[0], game_log(matchup[0]))
+        just_home_stats = list_stats_filter_home_or_away(home_stats, True)
+        away_stats = team_summary(matchup[1], game_log(matchup[1]))
+        just_away_stats = list_stats_filter_home_or_away(away_stats, False)
+        readable_stats = make_keys_readable(home_stats)
+        game['stats'] = zip(just_away_stats, readable_stats, just_home_stats)
         data.append(game)
+        
 
 
     send_email(data)
@@ -114,5 +144,7 @@ if __name__ == '__main__':
     try:
         daily_job()
     except Exception as e:
+        print('error')
         with open(join(project_directory, f"{date.today()}-error.log"), 'w') as f:
-            f.write(e)
+            f.write(str(e) + '\n\n')
+            f.write(format_exc())
