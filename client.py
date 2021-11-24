@@ -19,7 +19,6 @@ timezone = ZoneInfo(tz_string)
 
 def parse_games(game_list_json: dict) -> dict:
     results = []
-    print('parse response')
 
     for game in game_list_json['response']:
         game_result = {
@@ -47,7 +46,6 @@ def parse_games(game_list_json: dict) -> dict:
                 'away': away_periods
             }
 
-        print(game_result)
         results.append(game_result)
 
     return results
@@ -76,10 +74,8 @@ def get_scores_from_date(date: date, raw: bool=False, record=True) -> dict:
             dump(raw_file, f, indent=4)
         
     if raw:
-        print('raw request output')
         return req.json()
     else:
-        print('parsing request output')
         return parse_games(req.json())
 
 def just_todays_games(game_list_json: dict):

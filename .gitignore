@@ -2,3 +2,4 @@
 raw*.json
 *.log
 __pycache__
+*.backup

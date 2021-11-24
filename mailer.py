@@ -32,29 +32,3 @@ def send_email(data: list):
     # mail.set_content = body
     # server.send_message(mail)
     server.quit()
-
-
-if __name__ == '__main__':
-    load_dotenv('.env')
-    dummy_data = [
-        {
-            'home_team': 'this is a test',
-            'away_team': 'confirmation',
-            'datetime': 'tonight',
-            'stats': [
-                [5, 'watermelons', 3],
-                [78, 'fucks left to give', 'none']
-            ]
-        },
-        {
-            'home_team': 'continue test',
-            'away_team': 'roger doger',
-            'datetime': 'never',
-            'stats': [
-                [6, 'sex number', 9],
-                [19, 'a pretty shitty year', 75]
-            ]
-        }
-    ]
-    send_email(dummy_data)
-

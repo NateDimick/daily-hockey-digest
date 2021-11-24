@@ -2,7 +2,7 @@
     <head></head>
     <body>
         <h1>NHL Games for {{ date }}</h1>
-        {% for game in data %} <!-- TODO -->
+        {% for game in data %}
         <h2>{{ game.away_team }} @ {{ game.home_team }}, {{ game.datetime }}</h2>
         <table>
             <thead>
@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                {% for away_value, stat_name, home_value in game.stats %} <!-- TODO -->
+                {% for away_value, stat_name, home_value in game.stats %}
                 <tr>
                     <td>{{ "%.2f"|format(away_value) }}</td>
                     <td>{{ stat_name }}</td>
@@ -22,8 +22,6 @@
                 {% endfor %}
             </tbody>
         </table>
-
         {% endfor %}
-        
     </body>
 </html>

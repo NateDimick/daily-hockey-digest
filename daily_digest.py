@@ -11,14 +11,19 @@ from datetime import date, timedelta
 from dotenv import load_dotenv
 from mailer import send_email
 from os import environ, read
-from os.path import join
+from os.path import join, exists
 from project_directory import project_directory
+from shutil import copyfile
 from statistics import mean, mode, stdev
 from traceback import format_exc
 
 dotenv_file = join(project_directory, '.env')
 load_dotenv(dotenv_file)
 json_file = join(project_directory, f"{environ['SEASON']}-processed-results.json")
+raw_file = join(project_directory, f"{environ['SEASON']}-raw-requests.json")
+do_not_run_file = join(project_directory, 'do_not_run.flag')
+today = date.today()
+yesterday = today + timedelta(days=-1)
 
 def game_log(team_name: str) -> list:
     with open(json_file, 'r') as f:
@@ -108,11 +113,7 @@ def list_stats_filter_home_or_away(summary: dict, home: bool):
 
 
 def daily_job():
-    today = date.today()
-    yesterday = today + timedelta(days=-1)
-    print(today, yesterday)
     yesterdays_results = get_scores_from_date(yesterday)
-    print(yesterdays_results)
     with open(json_file, 'r') as f:
         all_results = json.load(f)
     all_results += yesterdays_results
@@ -140,11 +141,23 @@ def daily_job():
 
     send_email(data)
 
+def do_not_run() -> bool:
+    return exists(do_not_run_file)
+
+def backup_files(files):
+    for file in files:
+        copyfile(file, file + '.backup')
+
+
 if __name__ == '__main__':
+    if do_not_run():
+        exit()
     try:
+        backup_files([json_file, raw_file])
         daily_job()
     except Exception as e:
-        print('error')
-        with open(join(project_directory, f"{date.today()}-error.log"), 'w') as f:
+        with open(do_not_run_file, 'w') as f:
+            f.write('1')
+        with open(join(project_directory, f"{today}-error.log"), 'w') as f:
             f.write(str(e) + '\n\n')
             f.write(format_exc())
