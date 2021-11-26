@@ -8,7 +8,8 @@ def merge(file1, file2, new_name):
 
     j = j1 + j2
     with open(new_name, 'w') as f:
-        dump(j, f)
+        dump(j, f, indent=4)
 
 
-merge('raw-oct-12-to-nov-18.json', 'raw-nov-18-to-nov-21.json', 'raw-thru-nov-21.json')
+merge('2021-processed-results.json', 'backlog.json', '2021-processed-results.json')
+merge('2021-raw-requests.json', 'raw.json', '2021-raw-requests.json')

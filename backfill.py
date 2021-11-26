@@ -104,15 +104,15 @@ def process_cached_backfill(filename):
 
 
 if __name__ =='__main__':
-    # try:
-    #     scores = get_backfill_scores('2021-11-18')
-    #     with open('backlog.json', 'w') as f:
-    #         dump(scores, f)
-    #     with open('raw.json', 'w') as f:
-    #         dump(raw_requests, f)
-    # except:
-    #     with open('raw.json', 'w') as f:
-    #             dump(raw_requests, f)
-    scores = process_cached_backfill('raw-thru-nov-21.json')
-    with open('backlog.json', 'w') as f:
+    try:
+        scores = get_backfill_scores('2021-11-24')
+        with open('backlog.json', 'w') as f:
             dump(scores, f)
+        with open('raw.json', 'w') as f:
+            dump(raw_requests, f)
+    except:
+        with open('raw.json', 'w') as f:
+                dump(raw_requests, f)
+    # scores = process_cached_backfill('raw-thru-nov-21.json')
+    # with open('backlog.json', 'w') as f:
+    #         dump(scores, f)

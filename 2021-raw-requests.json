@@ -14931,5 +14931,730 @@
             "penalties": null
         },
         "events": true
+    },
+    {
+        "get": "games",
+        "parameters": {
+            "league": "57",
+            "season": "2021",
+            "date": "2021-11-24",
+            "timezone": "america/new_york"
+        },
+        "errors": [],
+        "results": 14,
+        "response": [
+            {
+                "id": 161634,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 703,
+                        "name": "Washington Capitals",
+                        "logo": "https://media.api-sports.io/hockey/teams/703.png"
+                    },
+                    "away": {
+                        "id": 688,
+                        "name": "Montreal Canadiens",
+                        "logo": "https://media.api-sports.io/hockey/teams/688.png"
+                    }
+                },
+                "scores": {
+                    "home": 6,
+                    "away": 3
+                },
+                "periods": {
+                    "first": "3-1",
+                    "second": "1-1",
+                    "third": "2-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161635,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "After Penalties",
+                    "short": "AP"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 690,
+                        "name": "New Jersey Devils",
+                        "logo": "https://media.api-sports.io/hockey/teams/690.png"
+                    },
+                    "away": {
+                        "id": 687,
+                        "name": "Minnesota Wild",
+                        "logo": "https://media.api-sports.io/hockey/teams/687.png"
+                    }
+                },
+                "scores": {
+                    "home": 2,
+                    "away": 3
+                },
+                "periods": {
+                    "first": "0-2",
+                    "second": "0-0",
+                    "third": "2-0",
+                    "overtime": "0-0",
+                    "penalties": "0-1"
+                },
+                "events": true
+            },
+            {
+                "id": 161636,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 696,
+                        "name": "Pittsburgh Penguins",
+                        "logo": "https://media.api-sports.io/hockey/teams/696.png"
+                    },
+                    "away": {
+                        "id": 701,
+                        "name": "Vancouver Canucks",
+                        "logo": "https://media.api-sports.io/hockey/teams/701.png"
+                    }
+                },
+                "scores": {
+                    "home": 4,
+                    "away": 1
+                },
+                "periods": {
+                    "first": "0-0",
+                    "second": "3-0",
+                    "third": "1-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161637,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "After Over Time",
+                    "short": "AOT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 684,
+                        "name": "Florida Panthers",
+                        "logo": "https://media.api-sports.io/hockey/teams/684.png"
+                    },
+                    "away": {
+                        "id": 695,
+                        "name": "Philadelphia Flyers",
+                        "logo": "https://media.api-sports.io/hockey/teams/695.png"
+                    }
+                },
+                "scores": {
+                    "home": 2,
+                    "away": 1
+                },
+                "periods": {
+                    "first": "0-1",
+                    "second": "0-0",
+                    "third": "1-0",
+                    "overtime": "1-0",
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161638,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 680,
+                        "name": "Columbus Blue Jackets",
+                        "logo": "https://media.api-sports.io/hockey/teams/680.png"
+                    },
+                    "away": {
+                        "id": 704,
+                        "name": "Winnipeg Jets",
+                        "logo": "https://media.api-sports.io/hockey/teams/704.png"
+                    }
+                },
+                "scores": {
+                    "home": 3,
+                    "away": 0
+                },
+                "periods": {
+                    "first": "1-0",
+                    "second": "0-0",
+                    "third": "2-0",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161639,
+                "date": "2021-11-24T19:00:00-05:00",
+                "time": "19:00",
+                "timestamp": 1637798400,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 674,
+                        "name": "Buffalo Sabres",
+                        "logo": "https://media.api-sports.io/hockey/teams/674.png"
+                    },
+                    "away": {
+                        "id": 673,
+                        "name": "Boston Bruins",
+                        "logo": "https://media.api-sports.io/hockey/teams/673.png"
+                    }
+                },
+                "scores": {
+                    "home": 1,
+                    "away": 5
+                },
+                "periods": {
+                    "first": "1-4",
+                    "second": "0-0",
+                    "third": "0-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161640,
+                "date": "2021-11-24T19:30:00-05:00",
+                "time": "19:30",
+                "timestamp": 1637800200,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 682,
+                        "name": "Detroit Red Wings",
+                        "logo": "https://media.api-sports.io/hockey/teams/682.png"
+                    },
+                    "away": {
+                        "id": 698,
+                        "name": "St. Louis Blues",
+                        "logo": "https://media.api-sports.io/hockey/teams/698.png"
+                    }
+                },
+                "scores": {
+                    "home": 4,
+                    "away": 2
+                },
+                "periods": {
+                    "first": "1-1",
+                    "second": "1-0",
+                    "third": "2-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161641,
+                "date": "2021-11-24T19:30:00-05:00",
+                "time": "19:30",
+                "timestamp": 1637800200,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 691,
+                        "name": "New York Islanders",
+                        "logo": "https://media.api-sports.io/hockey/teams/691.png"
+                    },
+                    "away": {
+                        "id": 692,
+                        "name": "New York Rangers",
+                        "logo": "https://media.api-sports.io/hockey/teams/692.png"
+                    }
+                },
+                "scores": {
+                    "home": 1,
+                    "away": 4
+                },
+                "periods": {
+                    "first": "0-0",
+                    "second": "0-2",
+                    "third": "1-2",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161642,
+                "date": "2021-11-24T20:00:00-05:00",
+                "time": "20:00",
+                "timestamp": 1637802000,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 689,
+                        "name": "Nashville Predators",
+                        "logo": "https://media.api-sports.io/hockey/teams/689.png"
+                    },
+                    "away": {
+                        "id": 702,
+                        "name": "Vegas Golden Knights",
+                        "logo": "https://media.api-sports.io/hockey/teams/702.png"
+                    }
+                },
+                "scores": {
+                    "home": 2,
+                    "away": 5
+                },
+                "periods": {
+                    "first": "0-1",
+                    "second": "0-2",
+                    "third": "2-2",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161643,
+                "date": "2021-11-24T21:00:00-05:00",
+                "time": "21:00",
+                "timestamp": 1637805600,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 679,
+                        "name": "Colorado Avalanche",
+                        "logo": "https://media.api-sports.io/hockey/teams/679.png"
+                    },
+                    "away": {
+                        "id": 670,
+                        "name": "Anaheim Ducks",
+                        "logo": "https://media.api-sports.io/hockey/teams/670.png"
+                    }
+                },
+                "scores": {
+                    "home": 5,
+                    "away": 2
+                },
+                "periods": {
+                    "first": "1-1",
+                    "second": "2-0",
+                    "third": "2-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161644,
+                "date": "2021-11-24T22:00:00-05:00",
+                "time": "22:00",
+                "timestamp": 1637809200,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 1460,
+                        "name": "Arizona Coyotes",
+                        "logo": "https://media.api-sports.io/hockey/teams/1460.png"
+                    },
+                    "away": {
+                        "id": 683,
+                        "name": "Edmonton Oilers",
+                        "logo": "https://media.api-sports.io/hockey/teams/683.png"
+                    }
+                },
+                "scores": {
+                    "home": 3,
+                    "away": 5
+                },
+                "periods": {
+                    "first": "1-1",
+                    "second": "0-1",
+                    "third": "2-3",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161645,
+                "date": "2021-11-24T22:00:00-05:00",
+                "time": "22:00",
+                "timestamp": 1637809200,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 685,
+                        "name": "Los Angeles Kings",
+                        "logo": "https://media.api-sports.io/hockey/teams/685.png"
+                    },
+                    "away": {
+                        "id": 700,
+                        "name": "Toronto Maple Leafs",
+                        "logo": "https://media.api-sports.io/hockey/teams/700.png"
+                    }
+                },
+                "scores": {
+                    "home": 2,
+                    "away": 6
+                },
+                "periods": {
+                    "first": "0-1",
+                    "second": "1-4",
+                    "third": "1-1",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161646,
+                "date": "2021-11-24T22:00:00-05:00",
+                "time": "22:00",
+                "timestamp": 1637809200,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 1436,
+                        "name": "Seattle Kraken",
+                        "logo": "https://media.api-sports.io/hockey/teams/1436.png"
+                    },
+                    "away": {
+                        "id": 676,
+                        "name": "Carolina Hurricanes",
+                        "logo": "https://media.api-sports.io/hockey/teams/676.png"
+                    }
+                },
+                "scores": {
+                    "home": 2,
+                    "away": 1
+                },
+                "periods": {
+                    "first": "0-1",
+                    "second": "1-0",
+                    "third": "1-0",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            },
+            {
+                "id": 161647,
+                "date": "2021-11-24T22:30:00-05:00",
+                "time": "22:30",
+                "timestamp": 1637811000,
+                "timezone": "america/new_york",
+                "week": null,
+                "timer": null,
+                "status": {
+                    "long": "Finished",
+                    "short": "FT"
+                },
+                "country": {
+                    "id": 31,
+                    "name": "USA",
+                    "code": "US",
+                    "flag": "https://media.api-sports.io/flags/us.svg"
+                },
+                "league": {
+                    "id": 57,
+                    "name": "NHL",
+                    "type": "League",
+                    "logo": "https://media.api-sports.io/hockey/leagues/57.png",
+                    "season": 2021
+                },
+                "teams": {
+                    "home": {
+                        "id": 697,
+                        "name": "San Jose Sharks",
+                        "logo": "https://media.api-sports.io/hockey/teams/697.png"
+                    },
+                    "away": {
+                        "id": 693,
+                        "name": "Ottawa Senators",
+                        "logo": "https://media.api-sports.io/hockey/teams/693.png"
+                    }
+                },
+                "scores": {
+                    "home": 6,
+                    "away": 3
+                },
+                "periods": {
+                    "first": "1-1",
+                    "second": "2-2",
+                    "third": "3-0",
+                    "overtime": null,
+                    "penalties": null
+                },
+                "events": true
+            }
+        ]
+    },
+    {
+        "get": "games",
+        "parameters": {
+            "league": "57",
+            "season": "2021",
+            "date": "2021-11-25",
+            "timezone": "america/new_york"
+        },
+        "errors": [],
+        "results": 0,
+        "response": []
     }
 ]

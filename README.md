@@ -38,3 +38,7 @@ Never used crontab before this project
 
 [crontab guru](https://crontab.guru)
 [this article](https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e)
+
+my crontab is:
+
+`0 9 * * * /bin/python3 /home/ubuntu/Projects/daily-hockey-digest/daily_digest.py`

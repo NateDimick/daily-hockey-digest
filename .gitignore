@@ -3,3 +3,5 @@ raw*.json
 *.log
 __pycache__
 *.backup
+backlog.json
+raw.json
