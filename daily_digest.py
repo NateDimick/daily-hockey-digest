@@ -73,7 +73,7 @@ def team_summary(team_name: str, game_log: list) -> dict:
         # 'nothingburgers_home': len([p for p in home_points_scored if p == 0]),
         # 'nothingburgers_away': len([p for p in away_points_scored if p == 0]),
         'defense_average': mean(points_allowed),
-        'defense_stddev': stdev(points_allowed),
+        # 'defense_stddev': stdev(points_allowed),
         # 'defense_average_home': mean(home_points_allowed),
         # 'defense_average_away': mean(away_points_allowed),
         'highest_allowed': max(points_allowed),
