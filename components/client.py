@@ -1,12 +1,12 @@
 """
 This script makes API calls to get information daily
 """
+from components.project_directory import project_directory
 from datetime import datetime, date
 from dotenv import load_dotenv
 from json import dump, load
 from os import environ
 from os.path import join
-from project_directory import project_directory
 from requests import get
 from zoneinfo import ZoneInfo
 
@@ -46,7 +46,7 @@ def parse_games(game_list_json: dict) -> dict:
                 'away': away_periods
             }
 
-        results.append(game_result)
+            results.append(game_result)
 
     return results
 

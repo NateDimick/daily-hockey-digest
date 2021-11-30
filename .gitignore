@@ -5,3 +5,4 @@ __pycache__
 *.backup
 backlog.json
 raw.json
+do_not_run.flag

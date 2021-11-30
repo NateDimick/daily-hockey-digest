@@ -6,13 +6,13 @@ the goal is to
 3. send out email to me with everything I want to know, nicely formatted
 """
 import json
-from client import get_scores_from_date, just_todays_games
+from components.client import get_scores_from_date, just_todays_games
+from components.mailer import send_email
+from components.project_directory import project_directory
 from datetime import date, timedelta
 from dotenv import load_dotenv
-from mailer import send_email
 from os import environ, read
 from os.path import join, exists
-from project_directory import project_directory
 from shutil import copyfile
 from statistics import mean, mode, stdev
 from traceback import format_exc
@@ -153,6 +153,7 @@ def backup_files(files):
 
 if __name__ == '__main__':
     if do_not_run():
+        print("do not run")
         exit()
     try:
         backup_files([json_file, raw_file])

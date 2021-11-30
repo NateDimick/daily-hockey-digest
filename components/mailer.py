@@ -1,6 +1,7 @@
 """
 This Script will be responsible for mailing me my daily dose of hockey info
 """
+from components.project_directory import project_directory
 from datetime import date
 from dotenv import load_dotenv
 from email.mime.multipart import MIMEMultipart
@@ -8,7 +9,6 @@ from email.mime.text import MIMEText
 from jinja2 import Template
 from os import environ
 from os.path import join
-from project_directory import project_directory
 from smtplib import SMTP_SSL
 
 

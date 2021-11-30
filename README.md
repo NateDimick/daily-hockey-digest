@@ -29,6 +29,7 @@ If I continue development on this project, then the following will be added in t
 1. styling to the html template
 1. switching from json files to a local or cloud instance of mongo db
 1. if I get really adventurous, implementing some ML to give betting suggestions for each game based on collected data
+1. integrate with the documented portions of the [NHL's API](https://gitlab.com/dword4/nhlapi)
 
 I have bigger ambitions for a local flask app to do similar operations as this, but with the info provided through a web page rather than a daily email. The daily email was a much faster project to get to MVP stage. This project may be deprecated from my use by next season.
 
@@ -41,4 +42,4 @@ Never used crontab before this project
 
 my crontab is:
 
-`0 9 * * * /bin/python3 /home/ubuntu/Projects/daily-hockey-digest/daily_digest.py`
+`0 9 * * * /bin/python3.9 /home/ubuntu/Projects/daily-hockey-digest/daily_digest.py`
