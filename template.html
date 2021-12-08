@@ -70,7 +70,9 @@
         }%}
         <h1 style="color: black;">{{ data|length }} NHL Games on {{ date }}</h1>
         {% for game in data %}
-        <h2 style="background: linear-gradient(to right, {{ colors[game.away_team.lower().split()[-1] + '1']}}, {{ colors[game.home_team.lower().split()[-1] + '1']}});">{{ game.away_team }} @ {{ game.home_team }}, {{ game.datetime }}</h2>
+        <h2 style="background: linear-gradient(to right, {{ colors[game.away_team.lower().split()[-1] + '1']}}, {{ colors[game.home_team.lower().split()[-1] + '1']}});">
+            <span style="color: {{ colors[game.away_team.lower().split()[-1] + '2']}}">{{ game.away_team }} @ </span><span style="color: {{ colors[game.home_team.lower().split()[-1] + '2']}}">{{ game.home_team }}, {{ game.datetime }}</span>
+        </h2>
         <table style="margin: auto; color: black;">
             <thead>
                 <tr>
