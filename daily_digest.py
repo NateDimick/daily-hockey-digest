@@ -129,7 +129,7 @@ def daily_job():
         game = {
             'home_team': matchup[0],
             'away_team': matchup[1],
-            'datetime': matchup[2],
+            'datetime': matchup[2].strftime("%I:%M %p").lstrip("0"),
         }
         home_stats = team_summary(matchup[0], game_log(matchup[0]))
         just_home_stats = list_stats_filter_home_or_away(home_stats, True)
