@@ -1,23 +1,92 @@
 <html>
-    <head></head>
-    <body>
-        <h1>{{ data|length }} NHL Games on {{ date }}</h1>
+    <head>
+    </head>
+    <body style="text-align: center; color:dimgray;">
+        {% set colors = {
+            "avalanche1": "maroon",
+            "avalanche2": "lightblue",
+            "blues1": "royalblue",
+            "blues2": "darkgoldenrod",
+            "bruins1": "yellow",
+            "bruins2": "black",
+            "blackhawks1": "black", 
+            "blackhawks2": "firebrick",
+            "canadiens1": "firebrick",
+            "canadiens2": "gainsboro",
+            "canucks1": "mediumblue",
+            "canucks2": "green",
+            "capitals1": "darkblue",
+            "capitals2": "crimson",
+            "coyotes1": "brown",
+            "coyotes2": "burlywood",
+            "devils1": "red",
+            "devils2": "seashell",
+            "ducks1": "goldenrod",
+            "ducks2": "maroon",
+            "flames1": "orangered",
+            "flames2": "orange",
+            "flyers1": "black",
+            "flyers2": "orange",
+            "hurricanes1": "black",
+            "hurricanes2": "darkred",
+            "islanders1": "darkblue",
+            "islanders2": "orangered",
+            "jackets1": "navy",
+            "jackets2": "red",
+            "jets1": "silver",
+            "jets2": "blue",
+            "kings1": "black",
+            "kings2": "silver",
+            "knights1": "black",
+            "knights2": "darkgoldenrod",
+            "kraken1": "teal",
+            "kraken2": "midnightblue",
+            "leafs1": "mediumblue",
+            "leafs2": "ghostwhite",
+            "lightning1": "whitesmoke",
+            "lightning2": "royalblue",
+            "oilers1": "navy",
+            "oilers2": "oldlace",
+            "panthers1": "sandybrown",
+            "panthers2": "navy",
+            "penguins1": "black",
+            "penguins2": "yellow",
+            "predators1": "goldenrod",
+            "predators2": "midnightblue",
+            "rangers1": "blue",
+            "rangers2": "red",
+            "sabres1": "mediumblue",
+            "sabres2": "goldenrod",
+            "senators1": "darkgoldenrod",
+            "senators2": "red",
+            "sharks1": "steelblue",
+            "sharks2": "black",
+            "stars1": "silver",
+            "stars2": "seagreen",
+            "wild1": "darkgreen",
+            "wild2": "maroon",
+            "wings1": "crimson",
+            "wings2": "floralwhite"
+        }%}
+        <h1 style="color: black;">{{ data|length }} NHL Games on {{ date }}</h1>
         {% for game in data %}
-        <h2>{{ game.away_team }} @ {{ game.home_team }}, {{ game.datetime }}</h2>
-        <table>
+        <h2 style="background: linear-gradient(to right, {{ colors[game.away_team.lower().split()[-1] + '1']}}, {{ colors[game.home_team.lower().split()[-1] + '1']}});">
+            <span style="color: {{ colors[game.away_team.lower().split()[-1] + '2']}}">{{ game.away_team }} @ </span><span style="color: {{ colors[game.home_team.lower().split()[-1] + '2']}}">{{ game.home_team }}, {{ game.datetime }}</span>
+        </h2>
+        <table style="margin: auto; color: black;">
             <thead>
                 <tr>
-                    <th>{{ game.away_team }}</th>
-                    <th>Stat</th>
-                    <th>{{ game.home_team }}</th>
+                    <th style="background: {{ colors[game.away_team.lower().split()[-1] + '1']}}; color: {{ colors[game.away_team.lower().split()[-1] + '2']}}">{{ game.away_team }}</th>
+                    <th style="color: dimgray; background: linear-gradient(to right, {{ colors[game.away_team.lower().split()[-1] + '1']}}, {{ colors[game.home_team.lower().split()[-1] + '1']}});">Stat</th>
+                    <th style="background: {{ colors[game.home_team.lower().split()[-1] + '1']}}; color: {{ colors[game.home_team.lower().split()[-1] + '2']}}">{{ game.home_team }}</th>
                 </tr>
             </thead>
             <tbody>
                 {% for away_value, stat_name, home_value in game.stats %}
                 <tr>
-                    <td>{{ "%.2f"|format(away_value) }}</td>
-                    <td>{{ stat_name }}</td>
-                    <td>{{ "%.2f"|format(home_value) }}</td>
+                    <td style="border: black; border-style: solid; border-width: thin; text-align: center;">{{ "%g"|format(away_value) }}</td>
+                    <td style="border: black; border-style: solid; border-width: thin; text-align: center;">{{ stat_name }}</td>
+                    <td style="border: black; border-style: solid; border-width: thin; text-align: center;">{{ "%g"|format(home_value) }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
