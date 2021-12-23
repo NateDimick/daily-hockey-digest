@@ -6,3 +6,5 @@ __pycache__
 backlog.json
 raw.json
 do_not_run.flag
+ml/games*
+ml/seasons*
